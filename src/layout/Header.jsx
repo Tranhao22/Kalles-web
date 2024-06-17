@@ -315,7 +315,6 @@ const Header = () => {
             </div>
             <div className={`t4s-close ${!isShowLoginSlideBar ? "d-none" :""}`} onClick={()=>{setShowLoginSlideBar(false)}}></div>
             <Login isShowLoginSlideBar={isShowLoginSlideBar} setShowLoginSlideBar={setShowLoginSlideBar}/>
-            <Login/>
         </header>
         
     );
