@@ -19,6 +19,8 @@ function Login({ isShowLoginSlideBar, setShowLoginSlideBar }) {
         event.preventDefault();
         if(inputValueEmail!== undefined && inputValueEmail!== null && inputValueEmail!== '' && inputValuePass!== undefined && inputValuePass!== null && inputValuePass!== '') {
             setShowLoginSlideBar(false);
+            setInputValueEmail('');
+            setInputValuePass('');
         }else{
             alert('Vui lòng nhập đầy đủ thông tin');
         }
