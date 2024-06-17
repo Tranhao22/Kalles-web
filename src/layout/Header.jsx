@@ -151,11 +151,87 @@ const Header = () => {
                         <li className="mega-menu">
                             <a href="/demo">Demo</a>
                         </li>
-                        <li className="mega-menu">
+                        <li className="mega-menu has-submenu">
                             <a href="/shop">
                                 Shop
                                 <span className="span_menu_new menu_title bg_new">New</span>
                             </a>
+                            <div className="submenu layout-menu d-none">
+                                <div className="content d-flex">
+                                    <div className="layout-content d-flex w-50">
+                                        <div className="bk-submenu">
+                                            <div className="heading">Portfolio</div>
+                                            <ul className="sub-column">
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className="bk-submenu">
+                                            <div className="heading">Portfolio</div>
+                                            <ul className="sub-column">
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns
+                                                        <span className="span_menu_hot bg_hot">Hot</span>
+                                                    </a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className="bk-submenu">
+                                            <div className="heading">Portfolio</div>
+                                            <ul className="sub-column">
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                                <li className="t4s-menu-item">
+                                                    <a href="#">Portfolio 2 Columns</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="layout-category d-flex w-50">
+                                        <div className="bk-submenu">
+                                            <img src="https://cdn.shopify.com/s/files/1/0616/9480/4174/files/mem-01.jpg" alt="" />
+                                        </div>
+                                        <div className="bk-submenu">
+                                            <img src="https://cdn.shopify.com/s/files/1/0616/9480/4174/files/MEN.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li className="mega-menu has-submenu">
                             <a href="/product">Product</a>

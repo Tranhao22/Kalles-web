@@ -274,3 +274,12 @@ li.t4s-menu-item{
     opacity: 0.4;
     height: 100vh;
 }
+
+.w-50{
+    width: 50%;
+}
+
+.layout-menu{
+    width:1300px;
+    left: -270px;
+}
