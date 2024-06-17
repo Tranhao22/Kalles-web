@@ -6,12 +6,17 @@ function Login({ isShowLoginSlideBar, setShowLoginSlideBar }) {
     const [inputValueEmail, setInputValueEmail] = useState('');
     const [inputValuePass, setInputValuePass] = useState('');
 
+    
+    const [inputValueEmailReset, setInputValueEmailReset] = useState('');
+
     const handleInputChange = (event) => {
         const { id, value } = event.target;
         if (id === "email") {
             setInputValueEmail(value);
         } else if (id === "password") {
             setInputValuePass(value);
+        } else if (id === "email-reset") {
+            setInputValueEmailReset(value);
         }
     };
 
@@ -30,7 +35,9 @@ function Login({ isShowLoginSlideBar, setShowLoginSlideBar }) {
   return (
     <div className={`login-sidebar  ${isShowLoginSlideBar ? "open" : "d-none"}`}>
       <div className="header d-flex">
-        <div className="login-title">LOGIN</div>
+        <div className="login-title d-none">LOGIN</div>
+        <div className="reset-title d-none">RESET YOUR PASSWORD</div>
+        <div className="reset-title">REGISTER</div>
         <div
           className="close"
           onClick={() => {
@@ -42,7 +49,7 @@ function Login({ isShowLoginSlideBar, setShowLoginSlideBar }) {
       </div>
       <div className="content">
         <div className="main">
-          <div className="login">
+          <div className="login d-none">
             <form autoComplete="off">
                 <div className="field"> 
                     <input type="email" autoComplete="new-email" id="email" 
@@ -64,7 +71,7 @@ function Login({ isShowLoginSlideBar, setShowLoginSlideBar }) {
                     </label>
                 </div>
                 <div className="field mr-top">
-                    <span className="forgot-label">Forgot your password? </span>
+                    <span className="forgot-label">Forgot your password?</span>
                 </div>
                 <div className="field mr-top">
                     <button onClick={handleSubmit}>Sign In</button>
@@ -75,6 +82,69 @@ function Login({ isShowLoginSlideBar, setShowLoginSlideBar }) {
                 New customer? Create your account
               </a>
             </div>
+          </div>
+          <div className="reset d-none">
+            <p className="p-reset">Lost your password? Please enter your email address. You will receive a link to create a new password via email.</p>
+            <form  autoComplete="off">
+                <div className="field mr-top"> 
+                    <input type="email" autoComplete="new-email" id="email-reset" 
+                        value={inputValueEmailReset}
+                        onChange={handleInputChange}
+                        />
+                    <label className={inputValueEmailReset ? "checking" : ""}>
+                        Email address<span className="required"> *</span>
+                    </label>  
+                </div>
+                
+                <div className="field mr-top">
+                    <button onClick={handleSubmit}>Sign In</button>
+                </div>
+            </form>
+          </div>
+          <div className="login">
+            <form autoComplete="off">
+                {/* <div className="field"> 
+                    <input type="email" autoComplete="new-email" id="email-regist" 
+                        value={inputValueEmail}
+                        onChange={handleInputChange}
+                        />
+                    <label className={inputValueEmail ? "checking" : ""}>
+                        Email <span className="required"> *</span>
+                    </label>  
+                </div>
+                <div className="field mr-top">
+                    <input type="password" autoComplete="new-password" 
+                        id="password-regist"
+                        value={inputValuePass}
+                        onChange={handleInputChange}
+                    />
+                    <label className={inputValuePass ? "checking" : ""}>
+                        Password <span className="required"> *</span>
+                    </label>
+                </div> */}
+                <div className="field"> 
+                    <input type="email" autoComplete="new-email" id="email-regist" 
+                        value={inputValueEmail}
+                        onChange={handleInputChange}
+                        />
+                    <label className={inputValueEmail ? "checking" : ""}>
+                        Email <span className="required"> *</span>
+                    </label>  
+                </div>
+                <div className="field mr-top">
+                    <input type="password" autoComplete="new-password" 
+                        id="password-regist"
+                        value={inputValuePass}
+                        onChange={handleInputChange}
+                    />
+                    <label className={inputValuePass ? "checking" : ""}>
+                        Password <span className="required"> *</span>
+                    </label>
+                </div>
+                <div className="field mr-top">
+                    <button>Register</button>
+                </div>
+            </form>
           </div>
         </div>
       </div>

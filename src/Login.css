@@ -44,18 +44,18 @@
     color: #878787;
 }
 
-.login-sidebar .content .login{
+.login-sidebar .content .login, .login-sidebar .content .reset{
     padding:20px;
     font-size: 14px;
     font-weight: 400;
 }
 
-.login .field{
+.login .field, .reset .field{
     position: relative;
     width: 100%;
 }
 
-.login input{
+.login input, .reset input{
     padding: 18px 0 12px 13px;
     border-radius: 0;
     border: 1px solid #878787;
@@ -63,7 +63,7 @@
 
 }
 
-.login .field label{
+.login .field label, .reset .field label{
     position: absolute;
     top: 17px;
     left: 14px;
@@ -89,7 +89,7 @@
     color: #56cfe1;
 }
 
-.login button {
+.login button, .reset button{
     color: #ffffff;
     background: #56cfe1;
     border: 1px solid #56cfe1;
@@ -105,4 +105,9 @@
 .checking{
     font-size: 11px !important;
     top: 10px !important;
+}
+
+.p-reset{
+    line-height: 18px;
+    text-align: justify;
 }
