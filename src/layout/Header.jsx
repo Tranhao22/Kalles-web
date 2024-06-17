@@ -1,4 +1,4 @@
-import "../Header.css"; // Add your styling here
+import "../Header.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,6 +14,7 @@ import {
 import {
     faHeart
 } from "@fortawesome/free-regular-svg-icons";
+import Login from "./Login";
 
 const listLang = [
     {
@@ -64,6 +65,7 @@ const Header = () => {
     
     const [isOpenPrice, setOpenPrice] = useState(false);
     const [price, setPrice] = useState('VND');
+    const [isShowLoginSlideBar, setShowLoginSlideBar] = useState(false);
 
     const toggleDropdownLang = () =>{
         setOpenPrice(false);
@@ -291,8 +293,9 @@ const Header = () => {
                             <FontAwesomeIcon icon={faSearch}/>
                         </a>
                     </div>
-                    <div className="profile">
-                        <a href="/profile">
+                    <div className="profile" >
+                        <a onClick={()=>{
+                            setShowLoginSlideBar(true)}} >
                             <FontAwesomeIcon icon={faUserAlt}/>
                         </a>
                     </div>
@@ -310,7 +313,11 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            <div className={`t4s-close ${!isShowLoginSlideBar ? "d-none" :""}`} onClick={()=>{setShowLoginSlideBar(false)}}></div>
+            <Login isShowLoginSlideBar={isShowLoginSlideBar} setShowLoginSlideBar={setShowLoginSlideBar}/>
+            <Login/>
         </header>
+        
     );
 };
 

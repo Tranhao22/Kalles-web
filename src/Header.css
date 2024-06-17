@@ -265,3 +265,12 @@ li.t4s-menu-item{
 .nav-ul .has-submenu .submenu:hover {
     display: block;
 }
+
+.t4s-close{
+    position: absolute;
+    width: 100%;
+    background: gray;
+    z-index: 10;
+    opacity: 0.4;
+    height: 100vh;
+}

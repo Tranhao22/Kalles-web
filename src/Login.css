@@ -1,0 +1,108 @@
+.login-sidebar{
+    height: 100vh;
+    position: absolute;
+    width: 20%;
+    z-index: 11;
+    background: #fff;
+    right: 0;
+}
+
+.login-sidebar .header{
+    padding: 5px 0 5px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-title{
+    font-weight: 500;
+    line-height: 1.428;
+    font-size: 16px;
+}
+
+.login-sidebar .header .close{
+    padding: 0;
+    background-color: transparent;
+    color: #222222;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-sidebar .header .close svg{
+    width: 16px;
+    height: 16px;
+    stroke-width: 1.5px;
+    display: inline-block;
+    pointer-events: none;
+    transition: .5s ease 0s;
+}
+
+.login-sidebar .content{
+    border-top: 1px solid #878787;
+    color: #878787;
+}
+
+.login-sidebar .content .login{
+    padding:20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login .field{
+    position: relative;
+    width: 100%;
+}
+
+.login input{
+    padding: 18px 0 12px 13px;
+    border-radius: 0;
+    border: 1px solid #878787;
+    width: 100%;
+
+}
+
+.login .field label{
+    position: absolute;
+    top: 17px;
+    left: 14px;
+    transform: scale(1);
+    transform-origin: left top;
+    transition: transform .2s ease-in-out;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.mr-top{
+    margin-top: 30px;
+}
+
+.forgot-label, .register-account{
+    color: #878787;
+    text-decoration: underline;
+}
+
+.forgot-label:hover{
+    color: #56cfe1;
+}
+
+.login button {
+    color: #ffffff;
+    background: #56cfe1;
+    border: 1px solid #56cfe1;
+    width: 100%;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.required{
+    color: red;
+}
+
+.checking{
+    font-size: 11px !important;
+    top: 10px !important;
+}
