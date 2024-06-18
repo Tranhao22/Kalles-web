@@ -112,3 +112,10 @@
     line-height: 18px;
     text-align: justify;
 }
+
+
+@media (max-width: 768px) {
+    .login-sidebar{
+        width: 40%;
+    }
+}

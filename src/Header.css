@@ -319,3 +319,45 @@ li.t4s-menu-item{
 .layout-content{
     justify-content: space-around;
 }
+
+
+
+@media (min-width: 769px) and (max-width: 960px) {
+    
+}
+
+@media (max-width: 768px) {
+    .contact-info{
+        display: none;
+    }
+    
+    .header-top{
+        flex-direction: column;
+        align-items: center;
+        line-height: 20px;
+    }
+
+    nav.nav{
+        display: none;
+    }
+
+    .sidebar-menu{
+        display: block;
+    }
+
+    .header-icons, .sidebar-menu, .logo{
+        width: 33.33%;
+    }
+
+    .header-bottom{
+        padding: 10px 20px;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    .header-icons{
+        justify-content: flex-end;
+    }
+}

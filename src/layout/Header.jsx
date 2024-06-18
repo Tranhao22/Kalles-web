@@ -8,13 +8,15 @@ import {
     faLocationDot,
     faSearch,
     faUserAlt,
-    faCartShopping
+    faCartShopping,
+    faBars
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
     faHeart
 } from "@fortawesome/free-regular-svg-icons";
 import Login from "./Login";
+import SideBar from "./SideBar";
 
 const listLang = [
     {
@@ -66,6 +68,7 @@ const Header = () => {
     const [isOpenPrice, setOpenPrice] = useState(false);
     const [price, setPrice] = useState('VND');
     const [isShowLoginSlideBar, setShowLoginSlideBar] = useState(false);
+    const [isShowSideBar, setShowSideBar] = useState(false);
 
     const toggleDropdownLang = () =>{
         setOpenPrice(false);
@@ -136,6 +139,9 @@ const Header = () => {
                 </div>
             </div>
             <div className="header-bottom d-flex">
+                <div className="sidebar-menu d-none" onClick={()=>{ setShowSideBar(true)}} >
+                    <FontAwesomeIcon icon={faBars} />
+                </div>
                 <div className="logo">
                     <a href="/">
                         <div className="img">
@@ -399,8 +405,18 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className={`t4s-close ${!isShowLoginSlideBar ? "d-none" :""}`} onClick={()=>{setShowLoginSlideBar(false)}}></div>
+            <div className={`t4s-close ${ !isShowLoginSlideBar ? "d-none" :""}`} 
+                    onClick={()=>{
+                        setShowLoginSlideBar(false);
+                    }}></div>
+
+            <div className={`t4s-close ${ !isShowSideBar ? "d-none" :""}`} 
+                    onClick={()=>{
+                        setShowSideBar(false);
+                    }}></div>
+
             <Login isShowLoginSlideBar={isShowLoginSlideBar} setShowLoginSlideBar={setShowLoginSlideBar}/>
+            <SideBar isShowSideBar={isShowSideBar} setShowSideBar={setShowSideBar}/>
         </header>
         
     );
