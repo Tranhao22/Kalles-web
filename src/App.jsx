@@ -1,10 +1,26 @@
 import "./App.scss";
-import { RouterProvider } from "react-router-dom";
-import { router } from "./router/index.jsx";
+import Layout from "./layout/Layout.jsx";
 
-function App() {
-	return <RouterProvider router={router} />;
-}
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Blog from "./pages/Blog";
+import Wishlist from "./pages/Wishlist/index.jsx";
+
+const App = () => {
+  return (
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          {/* Add more routes here */}
+        </Routes>
+      </Layout>
+    </Router>
+  );
+};
 
 export default App;
+
 
