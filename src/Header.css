@@ -52,6 +52,7 @@
     left:-80px;
     top: 30px;
     box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+    z-index: 22;
 }
 
 .item.active{
@@ -75,6 +76,7 @@
     left:-200px;
     top: 30px;
     box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+    z-index: 22;
 }
 
 .price .dropdown img{
