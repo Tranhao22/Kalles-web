@@ -169,13 +169,13 @@ const Header = () => {
                                                     <a href="#">Portfolio 2 Columns</a>
                                                 </li>
                                                 <li className="t4s-menu-item">
-                                                    <a href="#">Portfolio 2 Columns</a>
+                                                    <a href="#">Portfolio 2 Columns<span className="span_menu_new bg_new">New</span></a>
                                                 </li>
                                                 <li className="t4s-menu-item">
-                                                    <a href="#">Portfolio 2 Columns</a>
+                                                    <a href="#">Portfolio 2 Columns<span className="span_menu_new bg_new">New</span></a>
                                                 </li>
                                                 <li className="t4s-menu-item">
-                                                    <a href="#">Portfolio 2 Columns</a>
+                                                    <a href="#">Portfolio 2 Columns<span className="span_menu_new bg_new">New</span></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -187,7 +187,7 @@ const Header = () => {
                                                 </li>
                                                 <li className="t4s-menu-item">
                                                     <a href="#">Portfolio 2 Columns
-                                                        <span className="span_menu_hot bg_hot">Hot</span>
+                                                        <span className="span_menu_new bg_new">New</span>
                                                     </a>
                                                 </li>
                                                 <li className="t4s-menu-item">
@@ -211,10 +211,10 @@ const Header = () => {
                                                     <a href="#">Portfolio 2 Columns</a>
                                                 </li>
                                                 <li className="t4s-menu-item">
-                                                    <a href="#">Portfolio 2 Columns</a>
+                                                    <a href="#">Portfolio 2 Columns<span className="span_menu_hot bg_hot">Hot</span></a>
                                                 </li>
                                                 <li className="t4s-menu-item">
-                                                    <a href="#">Portfolio 2 Columns</a>
+                                                    <a href="#">Portfolio 2 Columns<span className="span_menu_hot bg_hot">Hot</span></a>
                                                 </li>
                                                 <li className="t4s-menu-item">
                                                     <a href="#">Portfolio 2 Columns</a>
@@ -223,11 +223,21 @@ const Header = () => {
                                         </div>
                                     </div>
                                     <div className="layout-category d-flex w-50">
-                                        <div className="bk-submenu">
+                                        <div className="bk-submenu w-50">
                                             <img src="https://cdn.shopify.com/s/files/1/0616/9480/4174/files/mem-01.jpg" alt="" />
+                                            <div className="wrapper">
+                                                <a className="title" href="#" target="_self">
+                                                    <span className="text">Women</span>
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div className="bk-submenu">
+                                        <div className="bk-submenu w-50">
                                             <img src="https://cdn.shopify.com/s/files/1/0616/9480/4174/files/MEN.jpg" alt="" />
+                                            <div className="wrapper">
+                                                <a className="title" href="#" target="_self">
+                                                    <span className="text">Women</span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

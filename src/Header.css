@@ -283,3 +283,39 @@ li.t4s-menu-item{
     width:1300px;
     left: -270px;
 }
+
+.layout-menu .content{
+    padding: 10px 5px;
+}
+
+.layout-menu .layout-category .bk-submenu img{
+    width: 100%;
+}
+
+.layout-menu .layout-category .bk-submenu{
+    position: relative;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.layout-menu .wrapper{
+    position: absolute;
+    bottom: 40px;
+    padding: 20px 30px;
+    width: 30%;
+    background: #fff;
+    text-align: center;
+}
+
+.layout-menu .wrapper .title{
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #222;
+    margin: 0 auto;
+}
+
+.layout-content{
+    justify-content: space-around;
+}
