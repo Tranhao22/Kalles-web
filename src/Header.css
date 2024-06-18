@@ -361,3 +361,14 @@ li.t4s-menu-item{
         justify-content: flex-end;
     }
 }
+
+@media (min-width: 374px) and (max-width: 576px) {
+    .header-icons .wishlist, .header-icons .profile{
+        display: none;
+    }
+
+    .price .dropdown {
+        width: 230px;
+    }
+}
+

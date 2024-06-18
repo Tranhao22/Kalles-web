@@ -1,26 +1,31 @@
 import "../SideBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 // import { useState } from "react";
 function SideBar({ isShowSideBar, setShowSideBar }) {
-
+    const [optionsSidebar, setOptionsSideBar] = useState(1);
 
   return (
     <div className={`sidebar ${isShowSideBar ? "open" : "d-none"}`}>
       <div className="header">
         <div className="category-menu d-flex">
-            <div className="menu menu-item active">
+            <div className={`menu menu-item ${ (optionsSidebar == 1) ? "active" : ""}`} onClick={()=>{
+                setOptionsSideBar(1);
+            }}>
                 MENU
             </div>
-            <div className="category menu-item">
+            <div className={`category menu-item ${ (optionsSidebar == 2) ? "active" : ""}`} onClick={()=>{
+                setOptionsSideBar(2);
+            }}>
                 CATEGORY
             </div>
         </div>
         <div
           className="close"
           onClick={() => {
-            // setShowLoginSlideBar(false);
-            // setOption(1);
+            setShowSideBar(false);
+            setOptionsSideBar(1);
           }}
         >
           <FontAwesomeIcon icon={faXmark} />
@@ -28,7 +33,7 @@ function SideBar({ isShowSideBar, setShowSideBar }) {
       </div>
       <div className="content">
         <div className="main">
-            <div className="menu-sub">
+            <div className={`menu-sub ${ (optionsSidebar == 1) ? "open" : "d-none"}`}>
                 <ul className="ul-menu d-flex">
                     <li className="li-menu">
                         <a href="/" className="a-submenu">
@@ -101,7 +106,7 @@ function SideBar({ isShowSideBar, setShowSideBar }) {
                 </ul>
             </div>
 
-            <div className="category-menu d-none">
+            <div className={`category-menu ${ (optionsSidebar == 2) ? "open" : "d-none"}`}>
                 <ul className="category-sub">
                     <li className="category-item">
                         <a href="/" className="a-category d-flex">

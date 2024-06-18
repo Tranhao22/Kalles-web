@@ -17,6 +17,7 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import Login from "./Login";
 import SideBar from "./SideBar";
+import Cart from "./Cart";
 
 const listLang = [
     {
@@ -69,6 +70,7 @@ const Header = () => {
     const [price, setPrice] = useState('VND');
     const [isShowLoginSlideBar, setShowLoginSlideBar] = useState(false);
     const [isShowSideBar, setShowSideBar] = useState(false);
+    const [isShowSideBarCart, setShowSideBarCart] = useState(false);
 
     const toggleDropdownLang = () =>{
         setOpenPrice(false);
@@ -398,7 +400,9 @@ const Header = () => {
                         </a>
                     </div>
                     <div className="cart">
-                        <a href="/cart">
+                        <a onClick={()=>{
+                            setShowSideBarCart(true)}}
+                            >
                             <FontAwesomeIcon icon={faCartShopping} />
                             <span data-cart-count="" className="t4s-pa t4s-count-cart">0</span>
                         </a>
@@ -415,8 +419,14 @@ const Header = () => {
                         setShowSideBar(false);
                     }}></div>
 
+            <div className={`t4s-close ${ !isShowSideBarCart ? "d-none" :""}`} 
+                    onClick={()=>{
+                        setShowSideBarCart(false);
+                    }}></div>
+
             <Login isShowLoginSlideBar={isShowLoginSlideBar} setShowLoginSlideBar={setShowLoginSlideBar}/>
             <SideBar isShowSideBar={isShowSideBar} setShowSideBar={setShowSideBar}/>
+            <Cart isShowSideBarCart={isShowSideBarCart} setShowSideBarCart={setShowSideBarCart}/>
         </header>
         
     );
